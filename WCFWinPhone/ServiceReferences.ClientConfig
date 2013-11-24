@@ -1,0 +1,16 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="Http_EndPoint" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:8089/MyService" binding="basicHttpBinding"
+                bindingConfiguration="Http_EndPoint" contract="Proxy.IProduct"
+                name="Http_EndPoint" />
+        </client>
+    </system.serviceModel>
+</configuration>
